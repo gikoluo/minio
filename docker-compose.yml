@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  owncloud:
+    image: minio/minio
+    restart: always
+    command: server /data
+    ports:
+      - ${HTTP_PORT}:9000
+    
